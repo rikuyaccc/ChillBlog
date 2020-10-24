@@ -1,0 +1,4 @@
+<p>投稿記事</p>
+<% @articles.each.do |article| %>
+  <%= link_to article.title, articles_path(article.id) %>
+<% end %>
