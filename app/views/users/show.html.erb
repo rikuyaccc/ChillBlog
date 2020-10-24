@@ -1,7 +1,12 @@
 <p>ユーザネーム</p>
 <%= @user.username %>
 <p>投稿記事</p>
-
 <% @articles.each do |article| %>
   <%= link_to article.title, article_path(article.id) %>
 <% end %>
+<p>いいねした記事:
+  <% @favorite_articles.each do |favorite_article| %>
+    <hr>
+    <p><%= link_to favorite_article.title, article_path(favorite_article.id) %></p>
+  <% end %>
+</p>

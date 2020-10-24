@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   has_many :articles
   has_many :favorites
+  # Userがファボした記事
+  has_many :favorite_articles, through: :favorites, source: :article
 
   validates :username, uniqueness: true, presence: true
 end
