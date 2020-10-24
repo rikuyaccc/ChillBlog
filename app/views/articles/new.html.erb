@@ -1,0 +1,9 @@
+<div class="container">
+	<div class="row">
+		<%= form with model: @article do |form| %>
+			<%= form.text_field :title, "タイトル" %>
+			<%= form.text_field :body>
+			<%= form.submit%>
+		<% end %>
+	</div>
+</div>
