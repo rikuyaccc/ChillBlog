@@ -5,17 +5,17 @@
 
       <% if @article.favorited_by?(current_user) %>
         <%= link_to article_favorites_path(@article.id), method: :delete do %>
-          <i class="far fa-heart like-btn"></i>
+          <i class="fas fa-heart unlike-btn"></i>
         <% end %>
       <% else %>
         <%= link_to article_favorites_path(@article.id), method: :post do %>
-          <i class="fas fa-heart unlike-btn"></i>
+          <i class="far fa-heart like-btn"></i>
         <% end %>
-        <%= @article.favorites.count %>
       <% end %>
+      <%= @article.favorites.count %>
 
       <% if current_user.id == @user.id %>
-        <%= link_to "投稿を削除する", article_path(@user.id), method: :delete, class: "text-right" %>
+        <%= link_to "削除", article_path(@user.id), method: :delete, class: "pt-2 float-right" %>
       <% end %>
       <hr>
       <%= link_to @user.username, user_path(@user.id) %>
