@@ -1,6 +1,6 @@
 <header>
   <nav class="navbar navbar-expand navbar-dark bg-dark">
-    <%= link_to "ChillBlog", root_path, class: 'navbar-brand' %>
+    <%= link_to "ChillForum", root_path, class: 'navbar-brand' %>
     <div id="Navber">
       <ul class="navbar-nav">
         <% if user_signed_in? %>
@@ -11,7 +11,7 @@
             <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'nav-link' %>
           </li>
           <li class="nav-item active">
-            <%= link_to '新規投稿', new_article_path, class: 'nav-link' %>
+            <%= link_to '投稿する', new_article_path, class: 'nav-link' %>
           </li>
           <li>
             <%= link_to '記事一覧', articles_path, class: 'nav-link' %>
