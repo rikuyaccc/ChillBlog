@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-8 offset-2">
+      <p>ユーザ一覧</p>
+    </div>
+    <div class="col-8 offset-2">
+      <% @users.each do |user| %>  
+        <%= link_to user.username, user_path(user.id) %>
+      <hr>
+      <% end %>
+    </div>
+  </div>
+</div>
